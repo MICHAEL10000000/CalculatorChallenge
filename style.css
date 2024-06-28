@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: League_font;
+    src: url(./fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+/* DEFAULT THEME */
+:root {
+    /* BACKGROUND--THEME1 */
+    --Default-bg/* (main background) */: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-1/* (toggle background, keypad background) */: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue/* (screen background) */: hsl(224, 36%, 15%);
+
+    /* KEYS */
+    --Desaturated-dark-blue-1 /* (key background) */: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue /* (key shadow) */: hsl(224, 28%, 35%);
+
+    --Red /* (key background, toggle) */: hsl(6, 63%, 50%);
+    --Dark-red /* (key shadow) */: hsl(6, 70%, 34%);
+
+    --Light-grayish-orange /* (key background) */: hsl(30, 25%, 89%);
+    --Grayish-orange /* (key shadow) */: hsl(28, 16%, 65%);
+
+
+    /* TEXT */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+}
+
+ /* THEME 2 */
+ [data-theme = "dark"]{
+    --Default-bg/* (main background) */: hsl(0, 0%, 90%);
+    --Very-dark-desaturated-blue-1/* (toggle background, keypad background) */: hsl(0, 5%, 81%);
+    --Very-dark-desaturated-blue/* (screen background) */: hsl(0, 0%, 93%);
+
+    /*  Keys */
+
+    --Desaturated-dark-blue-1 /* (key background) */: hsl(185, 42%, 37%);
+    --Desaturated-dark-blue /* (key shadow) */: hsl(185, 58%, 25%);
+
+    --Red /* (key background, toggle) */: hsl(25, 98%, 40%);
+    --Dark-red /* (key shadow) */: hsl(25, 99%, 27%);
+
+    --Light-grayish-orange /* (key background) */: hsl(45, 7%, 89%);
+    --Grayish-orange /* (key shadow) */: hsl(35, 11%, 61%);
+
+    /* Text */
+
+    --Very-dark-grayish-blue: hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+ }
+
+
+
+
+body{
+    background-color: var(--Default-bg);
+    padding: 3rem 1rem 1rem 1rem;
+    font-weight: 700;
+    font-family: League_font;
+
+}
+header{
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header>div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.switch-changer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+    padding: 0.2rem;
+    
+}
+.switch{
+    background: var(--Very-dark-desaturated-blue-1);
+    padding: 0.3rem 0.75rem 0.3rem 0.35rem;
+    border-radius: 1rem;
+    width: 5rem;
+}
+.swtich-div{
+    background: var(--Red);
+    padding: 0.6rem;
+    width: 30%;
+    border-radius: 50%;
+}
+
+
+
+.screen{
+    padding: 3rem;
+    background-color: var(--Very-dark-desaturated-blue);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.screen_Display{
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    right: 8%;
+    top: 45%;
+
+}
+
+.buttons{
+    padding: 1rem;
+    background-color: var(--Very-dark-desaturated-blue-1);
+    box-shadow: ;
+}
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.btn{
+    background: var(--White);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    border-radius: 0.3rem;
+    
+}
+#Del, #reset{
+        background-color: var(--Desaturated-dark-blue-1);
+        color: var(--White);
+}
+#reset, #equals{
+    padding: 1rem 2rem 1rem 2rem ;
+    width: 50%;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    
+}
+#equals{
+    background: var(--Red);
+    color: var(--White);
+}
+.finals{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    body>div{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    body{
+        padding-top: 1rem;
+    }
+    .screen{
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    body>div{
+        width: 40%;
+    }
+}
+
+
+/* why is button able to take setTheme('default') this even though this is not jsx */
