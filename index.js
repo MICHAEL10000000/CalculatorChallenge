@@ -226,7 +226,7 @@ document.querySelector("#plus").addEventListener("click", (e)=> {
                 if (firstIndex != secondIndex){
                     result = equivalents()
                 } else{
-                    result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length)
+                    result = equivalents()
                 }
             } else{
                 result = equivalents()
@@ -270,8 +270,7 @@ document.querySelector("#minus").addEventListener("click", ()=> {
                     console.log(screenDisplay.textContent[screenDisplay.textContent.length - 1])
                     result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length - 1)
                 } 
-                else{
-                    console.log("hey")    
+                else{   
                     result = equivalents()
                 }     
                 
@@ -301,18 +300,15 @@ document.querySelector("#divide").addEventListener("click", ()=> {
                 if (firstIndex != secondIndex){
                     result = equivalents()
                 } else{
-                    result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length)
+                    result = equivalents()
                 }
                 
             } else{
-                console.log("hi1")
                 result = equivalents()
-                
-            }
+           }
             console.log(screenDisplay.textContent, result)
             counter += 1
             screenDisplay.textContent = result + "/"
-            
         }
     }) 
     if (counter === 0 && screenDisplay.textContent.length != 0) {
@@ -329,14 +325,13 @@ document.querySelector("#multiply").addEventListener("click", ()=> {
     const checksList = makeChecks()
     checksList.forEach(item => {
         if (item === true && (screenDisplay.textContent[screenDisplay.textContent.length -1] + 1) > 1) {
-            console.log("hi")
             if(screenDisplay.textContent.includes("-") && !screenDisplay.textContent.includes("x") ){
                 const firstIndex = screenDisplay.textContent.indexOf("-")
                 const secondIndex = screenDisplay.textContent.lastIndexOf("-")
                 if (firstIndex != secondIndex){
                     result = equivalents()
                 } else{
-                    result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length)
+                    result = equivalents()
                 }
             } else{
                 result = equivalents()
@@ -346,7 +341,6 @@ document.querySelector("#multiply").addEventListener("click", ()=> {
         }
     }) 
     if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1] + 1) > 1) {  
-        console.log("hello")   
         screenDisplay.textContent = screenDisplay.textContent + "x"
     }
 })
