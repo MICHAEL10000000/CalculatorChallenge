@@ -1,4 +1,5 @@
-const themes = ['default', 'dark'];
+const themes = ['default', 'dark', 'purple'];
+const justifications =["center", "end", "start"] 
     let currentThemeIndex = 0;
 
     function setTheme(themeName) {
@@ -22,10 +23,8 @@ const themes = ['default', 'dark'];
     }
     const switchButton = document.querySelector(".switch")
     switchButton.addEventListener('click', ()=>{
-        console.log("hi")
+        switchButton.style = `justify-content: ${justifications[currentThemeIndex]}`
         toggleTheme()
-        /* console.log(document.querySelector(':root')) */
-        
     } );
     window.addEventListener('DOMContentLoaded', loadTheme());
 

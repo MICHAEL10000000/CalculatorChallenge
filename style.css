@@ -28,6 +28,7 @@
 
 
     /* TEXT */
+    --Text-Main: black;
     --Very-dark-grayish-blue: hsl(221, 14%, 31%);
     --White: hsl(0, 0%, 100%);
 }
@@ -50,11 +51,33 @@
     --Grayish-orange /* (key shadow) */: hsl(35, 11%, 61%);
 
     /* Text */
-
+    --Text-Main: black;
     --Very-dark-grayish-blue: hsl(60, 10%, 19%);
     --White: hsl(0, 0%, 100%);
  }
+ /* THEME 3 */
+[data-theme = "purple"]{
+    /* Backgrounds */
+    --Default-bg /* (main background) */: hsl(268, 75%, 9%);
+    --Very-dark-desaturated-blue-1 /* (toggle background, keypad background, screen background) */: hsl(268, 71%, 12%);
+    --Very-dark-desaturated-blue /* (screen background) */: hsl(268, 71%, 12%);
 
+    /* Keys */
+    --Desaturated-dark-blue-1 /* (key background) */: hsl(281, 89%, 26%);
+    --Desaturated-dark-blue /* (key shadow) */: hsl(285, 91%, 52%);
+
+    --Red /* (key background, toggle) */: hsl(176, 100%, 44%);
+    --Dark-red /* (key shadow) */: hsl(177, 92%, 70%);
+
+    --Light-grayish-orange /* (key background) */: hsl(268, 47%, 21%);
+    --Grayish-orange /* (key shadow) */: hsl(290, 70%, 36%);
+
+    /* Text */
+
+    --Text-Main: hsl(52, 100%, 62%);
+    --Very-dark-grayish-blue: hsl(198, 20%, 13%);
+    --White /* (text) */: hsl(0, 0%, 100%);
+}
 
 
 
@@ -84,6 +107,8 @@ header>div{
     
 }
 .switch{
+    display: flex;
+    justify-content: start;
     background: var(--Very-dark-desaturated-blue-1);
     padding: 0.3rem 0.75rem 0.3rem 0.35rem;
     border-radius: 1rem;
@@ -120,7 +145,6 @@ header>div{
 .buttons{
     padding: 1rem;
     background-color: var(--Very-dark-desaturated-blue-1);
-    box-shadow: ;
 }
 .numbers {
     display: grid;
@@ -128,15 +152,22 @@ header>div{
     gap: 1rem;
 }
 .btn{
-    background: var(--White);
+    background: var(--Light-grayish-orange);
     text-align: center;
     font-size: 2rem;
     padding: 1rem 0.5rem 1rem 0.5rem;
     border-radius: 0.3rem;
+    box-shadow: 0px 4px 0px 0px var(--Grayish-orange);
+    color :var(--Text-Main)
     
 }
+/* .btn:hover, #Del:hover, #reset:hover {
+    background-color: var(--Lighter);
+    box-shadow: 0px 4px 0px 0px var(--Grayish-orange);
+} */
 #Del, #reset{
         background-color: var(--Desaturated-dark-blue-1);
+        box-shadow: 0px 4px 0px 0px var(--Desaturated-dark-blue);
         color: var(--White);
 }
 #reset, #equals{
@@ -149,7 +180,11 @@ header>div{
 }
 #equals{
     background: var(--Red);
+    box-shadow: 0px 4px 0px 0px var(--Dark-red);
     color: var(--White);
+}
+#equals:hover{
+    background-color: var(--Dark-red)
 }
 .finals{
     margin-top: 1rem;
