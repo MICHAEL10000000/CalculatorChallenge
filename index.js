@@ -26,7 +26,7 @@ const justifications =["center", "end", "start"]
         switchButton.style = `justify-content: ${justifications[currentThemeIndex]}`
         toggleTheme()
     } );
-    window.addEventListener('DOMContentLoaded', loadTheme());
+    /* window.addEventListener('DOMContentLoaded', loadTheme()); */
 
 
 const screen = document.querySelector(".screen")
