@@ -234,8 +234,8 @@ document.querySelector("#plus").addEventListener("click", (e)=> {
             counter += 1
         }
     }) 
-    if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1] + 1) > 1) {  
-        console.log("hello")   
+    if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1]) >= 0) {  
+        console.log("hello", screenDisplay.textContent[screenDisplay.textContent.length -1 ])   
         screenDisplay.textContent = screenDisplay.textContent + "+"
     }
     })
@@ -310,7 +310,7 @@ document.querySelector("#divide").addEventListener("click", ()=> {
             screenDisplay.textContent = result + "/"
         }
     }) 
-    if (counter === 0 && screenDisplay.textContent.length != 0) {
+    if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1]) >= 0) {
         console.log("hi3")
         screenDisplay.textContent = screenDisplay.textContent + "/"
     }
@@ -339,7 +339,7 @@ document.querySelector("#multiply").addEventListener("click", ()=> {
             counter += 1
         }
     }) 
-    if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1] + 1) > 1) {  
+    if (counter === 0 && screenDisplay.textContent.length != 0 && (screenDisplay.textContent[screenDisplay.textContent.length -1]) >= 0) {  
         screenDisplay.textContent = screenDisplay.textContent + "x"
     }
 })
