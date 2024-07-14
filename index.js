@@ -257,6 +257,7 @@ document.querySelector("#minus").addEventListener("click", ()=> {
             //TO show that there are 2 minus signs at different position
             if( firstIndex != secondIndex){
                 if(screenDisplay.textContent[screenDisplay.textContent.length - 1] === "-"){
+                    console.log("hi1")
                     result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length - 1)
                     console.log(result)
                 } else{
@@ -267,10 +268,13 @@ document.querySelector("#minus").addEventListener("click", ()=> {
             else{//Just one minus sign
                 if(screenDisplay.textContent[screenDisplay.textContent.length - 1] === "-"){//Ensuring One minus sign is not beside another
                     console.log(screenDisplay.textContent[screenDisplay.textContent.length - 1])
+                    console.log("hi3")
                     result = screenDisplay.textContent.slice(0, screenDisplay.textContent.length - 1)
-                } 
-                else{   
+                } else if(screenDisplay.textContent[0] === "-"){
+                    result = screenDisplay.textContent
+                } else{     
                     result = equivalents()
+                    console.log("hi2", result)
                 }     
                 
             }
